@@ -326,59 +326,8 @@ public class TextEditor extends javax.swing.JFrame implements ActionListener{
         }
     }
     
-    /*
-        Functionality of SaveAs 
-    */
-    void saveAsFile()
-    {
-        /*JFileChooser fc=new JFileChooser();
-        int option=fc.showSaveDialog(this);
-        File f;
-        BufferedWriter out;
-        if(option==JFileChooser.APPROVE_OPTION)
-        {
-                try{
-                    FileWriter fw=new FileWriter(fc.getSelectedFile().getPath());
-                    f=new File(fw.toString());
-                    if(f.exists()==true)
-                    {
-                       int opt=fc.showDialog(jMenu1, "File already exist want to override ? ");
-                       if(opt==0)
-                       {
-                           out=new BufferedWriter(fw);
-                           out.write(jTextArea1.getText());
-                           out.close();
-                       }
-                    }
-                }catch(Exception e)
-                {
-                     e.printStackTrace();
-                }
-        } */
-      
-       FileDialog fg=new FileDialog(this, "Save As",FileDialog.SAVE);
-       fg.setVisible(true);
-       String s=fg.getFile();
-       String s2=fg.getDirectory();
-       String s3=s+s2,data;
-       data=jTextArea1.getText();
-       byte b[]=data.getBytes();
-       File f=new File(s3);
-       try{
-       FileOutputStream fobj=new FileOutputStream(f);
-       for(int i=0;i<data.length();i++)
-       {
-           fobj.write(b[i]);
-       }
-       }catch(Exception e)
-       {
-           e.printStackTrace();
-       }
-       
-//jf.showSaveDialog(this);
-       //File s1=jf.getCurrentDirectory(),s2=jf.;
-       
-    }
+    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -469,7 +418,8 @@ public class TextEditor extends javax.swing.JFrame implements ActionListener{
         }
         else if(e.getSource()==jMenuItem7)
         {
-            saveAsFile();
+           SaveAs sa = new SaveAs();
+            sa.saveAsFile(jTextArea1);
         }
         else if (e.getSource()==jMenuItem9)
         {
