@@ -325,6 +325,10 @@ public class TextEditor extends javax.swing.JFrame implements ActionListener{
                }catch(Exception e){}
         }
     }
+    
+    /*
+        Functionality of SaveAs 
+    */
     void saveAsFile()
     {
         /*JFileChooser fc=new JFileChooser();
@@ -351,7 +355,7 @@ public class TextEditor extends javax.swing.JFrame implements ActionListener{
                      e.printStackTrace();
                 }
         } */
-       
+      
        FileDialog fg=new FileDialog(this, "Save As",FileDialog.SAVE);
        fg.setVisible(true);
        String s=fg.getFile();
