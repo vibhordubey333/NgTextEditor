@@ -1,5 +1,9 @@
+package com.ngtexteditor.encryption;
+
 //data encrpytion standard
 //code for encrypting information
+import com.ngtexteditor.main.TextEditor;
+import com.ngtexteditor.decryption.Decrypt;
 import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

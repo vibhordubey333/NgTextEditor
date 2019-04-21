@@ -1,4 +1,7 @@
+package com.ngtexteditor.decryption;
 
+
+import com.ngtexteditor.main.TextEditor;
 import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;

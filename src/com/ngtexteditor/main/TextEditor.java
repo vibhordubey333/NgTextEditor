@@ -1,3 +1,6 @@
+package com.ngtexteditor.main;
+
+import com.ngtexteditor.encryption.Encrypt;
 import com.sun.speech.freetts.*;
 import java.io.*;
 import java.awt.Color;
